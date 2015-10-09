@@ -1,36 +1,72 @@
-p {
-    text-align: ;
+body {
+  background: #017B32;
 }
 
-ul {
+ul.board {
   margin: 0 auto;
-  display: inline;
-  padding: 0;
-  list-style-type: none;
-  overflow: hidden;
-  color:red;
-  border: 1px solid black;
-}
-
-li {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background: #E40606;
-  float: left;
-  border: 1px solid #000;
+  width: 150px;
+  height: 652px;
+  border: 2px solid white;
   color: white;
+  border-radius: 50px 50px 0 0;
+}
+
+ul.board li {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid white;
+  float: left;
   text-align: center;
-  font-size: 50px;
 }
 
-
-body { 
-font-family: 
-color:
-background 
-margin:
-font-size: 
-text-align:;
+ul.board li:first-child {
+  width: 148px;
+  border-radius: 47px 47px 0 0;
 }
 
+ul.board li:nth-child(11),
+ul.board li:nth-child(12),
+ul.board li:nth-child(13),
+ul.board li:nth-child(23),
+ul.board li:nth-child(24),
+ul.board li:nth-child(25) {
+  border-bottom: 2px solid yellow;
+}
+
+ul.board li:nth-child(14),
+ul.board li:nth-child(15),
+ul.board li:nth-child(16),
+ul.board li:nth-child(26),
+ul.board li:nth-child(27),
+ul.board li:nth-child(28) {
+  border-top: 2px solid yellow;
+}
+
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
+.played {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  display: inline-block;
+  background-color: yellow;
+  color: #222;
+}
+
+.wheel {
+  background: red;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+
+  /* Remove this later*/
+  float: left;
+}
