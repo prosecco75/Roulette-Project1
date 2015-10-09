@@ -14,3 +14,7 @@ $(function(){
 // Then lose all of your chips
 //
 // else then you win 36 chips - chips played
+
+// Clear the board
+// Select all of the spans and then remove the class .played
+// hint -> removeClass
