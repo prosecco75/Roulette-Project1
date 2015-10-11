@@ -1,61 +1,68 @@
-$(function(){
-  var $lis = $('.board li');
-  $lis.on("click", function(){
-    $(this).find("span").toggleClass("played");
-  })
-})
+// Document Ready
+$(play);
 
-// var guess = []
-// Push into guess the value of the clicked buttons
-// and decrease money :)
+var chosenSquares = [];
+var bet = 0;
+var pot = 50;
+var win = 0;
+var rotation = 0;
+var wheelNumbers = [0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26]
 
-// var number = Math.floor(Math.random() * 36);
-// if guess.indexOf(number) !== -1 
-// Then lose all of your chips
-//
-// else then you win 36 chips - chips played
+function play(){
+  $('.board li').on("click", chooseSquare);
+  $('.spin').on("click", spin);
+}
 
-// Clear the board
-// Select all of the spans and then remove the class .played
-// hint -> removeClass
+function chooseSquare(){
+  var $clickedSquare = $(this);
+  $clickedSquare.find("span").toggleClass("played");
+  chosenSquares.push(parseInt($clickedSquare.text()));
+  changeBets('.bet', 1);
+  changeBets('.pot', -1);
+}
 
-// Create a board to play on in html
-//   - 9 squares
-//   - similar/same class
+function changeBets(selector, amount) {
+  var span = $(selector).find("span");
+  var previous = parseInt(span.text());
+  span.text(previous += amount);
+}
 
-// Create events to link the squares to click
-//   - when they are clicked
-//     - 1. save which square was clicked
-//     - 2. change the color of the square
+function resetBet(selector){
+  var span = $(selector).find("span");
+  span.text(0);
+}
 
-// Check whether the game is over?
-//  - squares are full
-//  - when there is a winner
+function clearBoard(){
+  $('.played').removeClass("played");
+}
 
-// If there is no winner, and the game is still running you need to switch turns
+function spinWheel(){
+  var wheel = $(".wheel-image")[0];
+  wheel.removeAttribute('style');
+  var deg = 500 + Math.round(Math.random() * 500);
+  rotation += deg;
+  var css = '-webkit-transform: rotate(' + deg + 'deg);';
+  wheel.setAttribute('style', css);
+}
 
-window.onload = function(){
-  var guess = []
-  guess.push.value(clickedIndex);
- for (i=10,000; i<1 ; i--)
-  
- 
-  var totalNumberGames = 0;
+function spin(){
+  var chosenNumber = Math.floor(Math.random()*36)
+  $('.draw').text(chosenNumber);
+  spinWheel();
+  var deg = rotation //wheelNumbers.indexOf(chosenNumber)+1 * 10 + rotation;
+  console.log(rotation)
+  var bc = $('.ball-container')[0];
+  var css = '-webkit-transform: rotate(' + deg + 'deg);';
+  bc.setAttribute('style', css);
 
-  var winningNumbers = [
-    BLACK numbers [0,1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36], 
-    RED numbers   [2,4,6,8.10,11,13,15,17,20,22,24,26,28,29,31,33,35]
-                        ];
-                             
-  for (var w = 0; w < winningNumbers.length; w++) {
-
-  // Grab all of the li's on the page and save in a variable of squares 
-  var squares = document.getElementsByTagName("li");
-
-  // Loop through the squares and setup a "click" event listener
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].addEventListener("click", function(){
-
-      // When a square is clicked, we find out which index it has in the square array
-      var squaresArray = Array.prototype.slice.call(squares);
-      var clickedIndex = squaresArray.indexOf(this);
+  // Check if the chosen number appears in the chosenSquares
+  if (chosenSquares.indexOf(chosenNumber) !== -1) {
+    console.log("Win");
+    changeBets('.pot', 36);
+    resetBet('.bet');
+  } else {
+    console.log("Lose");
+    resetBet('.bet');
+  }
+  clearBoard();
+}
