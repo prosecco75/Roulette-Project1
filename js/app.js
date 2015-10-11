@@ -39,14 +39,13 @@ window.onload = function(){
   guess.push.value(clickedIndex);
  for (i=10,000; i<1 ; i--)
   
-  // Create a variable to count the total number of games
+ 
   var totalNumberGames = 0;
 
-  // Create a variable that stores all of the winning numbers
   var winningNumbers = [
-                        BLACK numbers [0,1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36], 
-                        RED numbers   [2,4,6,8.10,11,13,15,17,20,22,24,26,28,29,31,33,35]
-                              ];
+    BLACK numbers [0,1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36], 
+    RED numbers   [2,4,6,8.10,11,13,15,17,20,22,24,26,28,29,31,33,35]
+                        ];
                              
   for (var w = 0; w < winningNumbers.length; w++) {
 
