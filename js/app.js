@@ -72,3 +72,13 @@ function spin(){
   }
   clearBoard();
 }
+
+
+// function choseNnumber(a,b,c){
+//   if (a + b + c === 50) {
+//     console.log ("You have won!");
+//   else {
+//     return ("You have lost");
+//   }
+
+

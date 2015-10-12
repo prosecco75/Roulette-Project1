@@ -14,6 +14,12 @@
     <ul class="scores">
       <li class="bet">Bet <span>0</span></li>
       <li class="pot">Pot <span>50</span></li>
+      <li class="box">    
+            <label for="qty"><abbr title="Quantity">Qty</abbr></label>
+            <input id="qty" value="0" />
+            <button id="down" onclick="modify_qty(-1)">-1</button>
+            <button id="up" onclick="modify_qty(1)">+1</button>
+        </li>
     </ul>
 
     <div class="wheel">Choose your squares!</div>
@@ -59,6 +65,6 @@
       <li class="black"><span>35</span></li>
       <li class="red"><span>36</span></li>   
     </ul>
-   
+
   </body>
 </html>

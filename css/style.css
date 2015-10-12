@@ -59,21 +59,32 @@ h1 {
 
 .scores {
   overflow: hidden;
-  width: 220px;
-  margin: 0 auto;
+  width: 500px;
   color: #fff;
+  left: 50%;
+  margin-left: auto;
+  margin-right: 19%;
 }
 
 .scores li {
   background: #F48FB1;
   width: 100px;
   text-align: center;
-  float: left;
   margin: 10px 5px;
   border-radius: 5px;
   font-size: 20px;
   line-height: 1.5;
 }
+
+
+.pot {
+float: left;
+}
+
+.bet {
+  float: left;
+}
+
 
 .scores li span {
   display:block;
@@ -86,4 +97,23 @@ h1 {
   font-weight: bold;
   color: #fff;
   font-size: 40px;
+}
+
+
+
+.box {
+  background-color: #444;
+    text-align: center;
+    float: right;
+    margin: 10px 5px;
+    display: list-item;
+    vertical-align: baseline;
+    -webkit-border-radius: 12px;
+    border-radius: 12px; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    padding: .8em .8em 1em;
+    width: 8em;
+  margin: 0 auto; 
+    -webkit-box-shadow: 0px 0px 12px 0px #000;
+    box-shadow: 0px 0px 12px 0px #000;
 }
