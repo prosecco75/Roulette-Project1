@@ -73,12 +73,23 @@ function spin(){
   clearBoard();
 }
 
-
-// function choseNnumber(a,b,c){
-//   if (a + b + c === 50) {
-//     console.log ("You have won!");
-//   else {
-//     return ("You have lost");
-//   }
+function Counter(){
+  var button     = document.getElementById('down');
+  var button     = document.getElementById('up');
+  this.player1Score      = 0;
+  this.player2Score      = 0;
 
 
+  // function choseNnumber(a,b,c){
+  //   if (a + b + c === 50) {
+  //     console.log ("You have won!");
+  //   else {
+  //     return ("You have lost");
+  //   }
+
+
+function clearTimeout() {
+  alert("")
+}
+    
+var timeoutID = window.setTimeout(code, [delay]);
