@@ -1,92 +1,15 @@
-ROULETTE GAME
+"Pick a Boo" game
  
 
 
-http://onlineroulette.org.uk/free-play/
-
-1. Player places bets on mat and choose the potential winning Nbr.
-1. Create Event: Click on button SPIN so Wheel spins. 
-2. Event: $(li).on("click",addchip)
-2. Event: Wheel spins search through array nbrs played 
-
-3. Winning nb displayed on button (ex: 31 red ODD)
-   If player wins, display button says: " Lucky you, you have won a trip to Miami !!!"
-   If player looses, display button says: "Perseverance is failing 19 times and succeeding the 20th, keep trying!"
-4. Create RESET BUTTON 
-5. Create REPEAT (to bet on same nbrs and spin wheel again)
-
-BOARD 
-Nb from 1 to 36.
- 
-Save array of things to play
-Find out if player has won
-Button to clear
-With JQuery select all Spans to remove & remove class player
-Method remove class 
- 
-
-// var guess = []
-// Push into guess the value of the clicked buttons
-// and decrease money :)
-
-// var number = Math.floor(Math.random() * 36);
-// if guess.indexOf(number) !== -1 
-// Then lose all of your chips
-//
-// else then you win 36 chips - chips played
-
-// Clear the board
-// Select all of the spans and then remove the class .played
-// hint -> removeClass
-
-// Create a board to play on in html
-//   - 9 squares
-//   - similar/same class
-
-// Create events to link the squares to click
-//   - when they are clicked
-//     - 1. save which square was clicked
-//     - 2. change the color of the square
-
-// Check whether the game is over?
-//  - squares are full
-//  - when there is a winner
-
-// If there is no winner, and the game is still running you need to switch turns
-
-// window.onload = function(){
-//   var guess     = []
-//   var winchips  = []
-
-//    guess.push.value(clickedIndex);
-//   for (i=10,000; i<1 ; i--)
-   
-//   var number = Math.floor(Math.random() * 36);
+1. Player chooses several numbers, the amount of numbers chosen show in the Bet     button
+2. Click on Spin button (Checks the array of numbers played)
+3. One Draw number appears & message says if player has won or lost. 
+4. When click on Spin button:
+   The Pot counter decreases depending how many numbers have been selected by player (ie if picked 5 nbrs, Pot decreases by 5)
+5. Player wins = Pot display is updated using Math method increasing Pot by 36.  
+   Bet display is reset to 0.
+6. Player loses= Bet display is reset to 0.
 
 
-//   if guess.indexOf(number) !== -1 {
-//         winchips = "0";
-//     } else {
-//         winchips = "36";
-//     }
-  
- 
-//   var totalNumberGames = 0;
 
-//   var winningNumbers = [
-//     BLACK numbers [0,1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36], 
-//     RED numbers   [2,4,6,8.10,11,13,15,17,20,22,24,26,28,29,31,33,35]
-//                         ];
-                             
-//   for (var w = 0; w < winningNumbers.length; w++) {
-
-//   // Grab all of the li's on the page and save in a variable of squares 
-//   var squares = document.getElementsByTagName("li");
-
-//   // Loop through the squares and setup a "click" event listener
-//   for (var i = 0; i < squares.length; i++) {
-//     squares[i].addEventListener("click", function(){
-
-//       // When a square is clicked, we find out which index it has in the square array
-//       var squaresArray = Array.prototype.slice.call(squares);
-//       var clickedIndex = squaresArray.indexOf(this);
