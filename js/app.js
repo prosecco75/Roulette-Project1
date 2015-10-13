@@ -51,12 +51,12 @@ function spin(){
 
   // Check if the chosen number appears in the chosenSquares
   if (chosenSquares.indexOf(chosenNumber) !== -1) {
-    $('.wheel').text("No " + $('.wheel').text() + "  " + '"wins!!"')
+    $('.wheel').text("No " + $('.wheel').text() + "  " + '"Wins!!"')
 
     changeBets('.pot', 36);
     resetBet('.bet');
   } else {
-    $('.wheel').text("No " + $('.wheel').text() + "  " + '"lost, try again!!"')
+    $('.wheel').text("No " + $('.wheel').text() + "  " + '"Lost, try again!!"')
     resetBet('.bet');
   }
   clearBoard();
