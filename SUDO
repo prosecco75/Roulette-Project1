@@ -2,14 +2,14 @@
  
 
 
-1. Player chooses several numbers, the amount of numbers chosen show in the Bet     button
+1. Player chooses several numbers, the amount of numbers chosen show in the Bet button
 2. Click on Spin button (Checks the array of numbers played)
 3. One Draw number appears & message says if player has won or lost. 
 4. When click on Spin button:
    The Pot counter decreases depending how many numbers have been selected by player (ie if picked 5 nbrs, Pot decreases by 5)
 5. Player wins = Pot display is updated using Math method increasing Pot by 36.  
    Bet display is reset to 0.
-6. Player loses= Bet display is reset to 0.
+6. Player loses = Bet display is reset to 0.
 
 
 
