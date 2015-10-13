@@ -11,7 +11,7 @@ body {
 
 
 h1 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   margin-top: 10px;
   color: #E91E63;
@@ -125,6 +125,6 @@ h1 {
 .wheel {
   font-weight: bold;
   color: #B71C1C;
-  font-size: 35px;
+  font-size: 30px;
 }
 

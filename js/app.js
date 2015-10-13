@@ -1,3 +1,4 @@
+
 // Document Ready
 $(play);
 
@@ -50,12 +51,12 @@ function spin(){
 
   // Check if the chosen number appears in the chosenSquares
   if (chosenSquares.indexOf(chosenNumber) !== -1) {
-    $('.wheel').text($('.wheel').text() + "  " + '"Congratualions, you win!!"')
+    $('.wheel').text("No " + $('.wheel').text() + "  " + '"wins!!"')
 
     changeBets('.pot', 36);
     resetBet('.bet');
   } else {
-    $('.wheel').text($('.wheel').text() + "  " + '"You have lost, try again!!"')
+    $('.wheel').text("No " + $('.wheel').text() + "  " + '"lost, try again!!"')
     resetBet('.bet');
   }
   clearBoard();
