@@ -1,93 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Roulette</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="./css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/app.js"></script>
-</head>
-<body>
-  <h1>Roulette</h1>
+  <head>
+    <title>Pick A Boo</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+  </head>
+  <body>
+    <h1 class="animated bounce">"Pick A Boo" game</h1>
 
-  <ul class="scores">
-    <li class="bet">Bet <span>0</span></li>
-    <li class="pot">Pot <span>50</span></li>
-    
+    <div class="pictures">
+    <img src="http://www.newyorker.com/wp-content/uploads/2014/08/Stokes-Hello-Kitty2-320.jpg" class="kitty" alt="Kitty" style="width:130px;height:130px;">
 
+    <img src="http://vignette3.wikia.nocookie.net/austinally/images/f/ff/Cartoon_cupcake.png/revision/latest?cb=20130519134711" class="cupcake animated swing" alt="cup" style="width:160px;height:160px;">
 
-    <!-- <li class="box">    
-      <label for="qty"><abbr title="Quantity">Qty</abbr></label>
-      <input id="qty" value="0" />
-      <button id="down" onclick="modify_qty(-1)">-1</button>
-      <button id="up" onclick="modify_qty(1)">+1</button>
-    </li> -->
-  </ul>
+    <img src="http://www.clipartlord.com/wp-content/uploads/2015/04/cupcake15.png" class="cupcak animated swing" alt="cup" style="width:200px;height:200px;">
+    </div>
 
-  <div class="scoreboard">
-    <h2>Scoreboard</h2>
-    <table>
-      <tbody>
-        <tr>
-          <td id="humanScore">0</td>
-          <td id="computerScore">0</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>You</th>
-          <th>Bot</th>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-  
+    <ul class="scores">
+      <li class="bet">Bet <span>0</span></li>
+      <li class="pot">Pot <span>50</span></li>
+    </ul>
 
-  <div class="wheel">Choose your squares!</div>
-  <div class="spin btn">Spin</div>
+    <div class="wheel"></div>
 
-  <ul class="board">
-    <!-- <li>0</li> -->
-    <li><span>1</span></li>
-    <li><span>2</span></li>
-    <li><span>3</span></li>
-    <li><span>4</span></li>
-    <li><span>5</span></li>
-    <li><span>6</span></li>
-    <li><span>7</span></li>
-    <li><span>8</span></li>
-    <li><span>9</span></li>
-    <li><span>10</span></li>
-    <li><span>11</span></li>
-    <li><span>12</span></li>
-    <li><span>13</span></li>
-    <li><span>14</span></li>
-    <li><span>15</span></li>
-    <li><span>16</span></li>
-    <li><span>17</span></li>
-    <li><span>18</span></li>
-    <li><span>19</span></li>
-    <li><span>20</span></li>
-    <li><span>21</span></li>
-    <li><span>22</span></li>
-    <li><span>23</span></li>
-    <li><span>24</span></li>
-    <li><span>25</span></li>
-    <li><span>26</span></li>
-    <li><span>27</span></li>
-    <li><span>28</span></li>
-    <li><span>29</span></li>
-    <li><span>30</span></li>
-    <li><span>31</span></li>
-    <li><span>32</span></li>
-    <li><span>33</span></li>
-    <li><span>34</span></li>
-    <li><span>35</span></li>
-    <li><span>36</span></li>   
-  </ul>
+    <div class="spin btn">Spin</div>
 
+    <ul class="board">
+      <li class="animated pulse"><span>1</span></li>
+      <li class="animated pulse"><span>2</span></li>
+      <li class="animated pulse"><span>3</span></li>
+      <li class="animated pulse"><span>4</span></li>
+      <li class="animated pulse"><span>5</span></li>
+      <li class="animated pulse"><span>6</span></li>
+      <li class="animated pulse"><span>7</span></li>
+      <li class="animated pulse"><span>8</span></li>
+      <li class="animated pulse"><span>9</span></li>
+      <li class="animated pulse"><span>10</span></li>
+      <li class="animated pulse"><span>11</span></li>
+      <li class="animated pulse"><span>12</span></li>
+      <li class="animated pulse"><span>13</span></li>
+      <li class="animated pulse"><span>14</span></li>
+      <li class="animated pulse"><span>15</span></li>
+      <li class="animated pulse"><span>16</span></li>
+      <li class="animated pulse"><span>17</span></li>
+      <li class="animated pulse"><span>18</span></li>
+      <li class="animated pulse"><span>19</span></li>
+      <li class="animated pulse"><span>20</span></li>
+      <li class="animated pulse"><span>21</span></li>
+      <li class="animated pulse"><span>22</span></li>
+      <li class="animated pulse"><span>23</span></li>
+      <li class="animated pulse"><span>24</span></li>
+      <li class="animated pulse"><span>25</span></li>
+      <li class="animated pulse"><span>26</span></li>
+      <li class="animated pulse"><span>27</span></li>
+      <li class="animated pulse"><span>28</span></li>
+      <li class="animated pulse"><span>29</span></li>
+      <li class="animated pulse"><span>30</span></li>
+      <li class="animated pulse"><span>31</span></li>
+      <li class="animated pulse"><span>32</span></li>
+      <li class="animated pulse"><span>33</span></li>
+      <li class="animated pulse"><span>34</span></li>
+      <li class="animated pulse"><span>35</span></li>
+      <li class="animated pulse"><span>36</span></li>   
+    </ul>
 
-
-</body>
+  </body>
 </html>

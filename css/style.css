@@ -1,29 +1,61 @@
-/*#E91E63
-#FCE4EC
-#F8BBD0
-*/
-
 body {
   font-family: 'Open Sans', sans-serif;
   background: #FCE4EC;
   color: #E91E63;
   text-align: center;
   line-height: 1.5;
+  background-repeat:repeat;
+  background-image: url("http://theartmad.com/wp-content/uploads/2015/08/Pink-Birthday-Balloons-Clip-Art-6.png");
+  background-size: 20px;
 }
 
+
 h1 {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
+  margin-top: 10px;
+  color: #E91E63;
+}
+
+.pictures {
+  border-radius: 5px;
+  margin-top: 5px;
+  height: 150px;
+  width: 100%;
+}
+
+.kitty {
+  margin-right: 0;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.cupcake {
+  position: absolute;
+  right:10%;
+  top: 15%;
+  transform:rotate(10deg);
+}
+
+.cupcak {
+  position: absolute;
+  left:10%;
+  top: 10%;
+  transform:rotate(-10deg);
 }
 
 .btn {
   padding: 10px 20px;
   background: #E91E63;
   color: #fff;
-  width: 600px;
+  width: 50px;
   margin: 10px auto;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: px;
+}
+
+.spin:hover {
+  background-color: #FF3177;
 }
 
 .board {
@@ -59,11 +91,10 @@ h1 {
 
 .scores {
   overflow: hidden;
-  width: 500px;
+  width: 220px;
   color: #fff;
   left: 50%;
-  margin-left: auto;
-  margin-right: 19%;
+  margin: 0 auto;
 }
 
 .scores li {
@@ -76,15 +107,13 @@ h1 {
   line-height: 1.5;
 }
 
-
 .pot {
-float: left;
+  float: left;
 }
 
 .bet {
   float: left;
 }
-
 
 .scores li span {
   display:block;
@@ -95,48 +124,7 @@ float: left;
 
 .wheel {
   font-weight: bold;
-  color: #fff;
-  font-size: 40px;
+  color: #B71C1C;
+  font-size: 35px;
 }
 
-.box {
-  background-color: #444;
-    text-align: center;
-    float: right;
-    margin: 10px 5px;
-    display: list-item;
-    vertical-align: baseline;
-    -webkit-border-radius: 12px;
-    border-radius: 12px; 
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-    padding: .8em .8em 1em;
-    width: 8em;
-  margin: 0 auto; 
-}
-
-.scoreboard {
-  width: 150px;
-  height: 120px;
-  margin-top: -11%;
-  margin-left: 15%;
-  border: 3px solid #F48FB1;
-  border-radius: 5px;
-
-}
-.scoreboard h2 {
-  border-bottom: 1px solid #F48FB1;
-  margin: 0;
-  padding: 10px;
-}
-.scoreboard table {
-  margin: 10px auto;
-  width: 100%;
-  border-collapse: collapse;
-}
-.scoreboard th, .scoreboard td {
-  text-align: center;
-}
-.scoreboard td {
-  font-size: 25px;
-  padding: 0 10px;
-}
