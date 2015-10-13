@@ -17,7 +17,7 @@ When the player wins, the Pot increases by 36. At the end of every game, the Bet
 ![](./images/kitt.png)
 
 ##Tools:
-![](./images/kitty.png)
+![](./images/hello.png)
 
 We used HTML 5, CSS and jQuery to create this game.
 'Open Sans' Font Google font was used to style the game. 
